@@ -51,6 +51,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'mysite.urls'
+ROOT_URLCONF = 'blog.urls'
 
 TEMPLATES = [
     {
