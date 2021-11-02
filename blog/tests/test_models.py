@@ -14,15 +14,15 @@ class PublicacionModelTest(TestCase):
 
     def test_titulo_label(self):
         publicacion=Post.objects.get(id=1)
-        field_label = publicacion._meta.get_field('texto').verbose_name
-        self.assertEquals(field_label,'texto')
+        field_label = publicacion._meta.get_field('text').verbose_name
+        self.assertEquals(field_label,'text')
 
     def test_titulo_max_length(self):
         publicacion=Post.objects.get(id=1)
-        max_length = Post._meta.get_field('titulo').max_length
-        self.assertEquals(max_length,100)
+        max_length = Post._meta.get_field('title').max_length
+        self.assertEquals(max_length,200)
 
     def test_fecha_creacion_label (self):
-        publicacion = Publicacion.objects.get(id=1)
-        field_label = publicacion._meta.get_field('fecha_creacion').verbose_name
+        publicacion = Post.objects.get(id=1)
+        field_label = publicacion._meta.get_field('created_date').verbose_name
         self.assertEquals(field_label,'Creado')
