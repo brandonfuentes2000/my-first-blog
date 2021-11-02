@@ -7,7 +7,7 @@ class PublicacionModelTest(TestCase):
     @classmethod
     def setUpTestData(cls):
         autor = User.objects.create_user('john', 'lennon@thebeatles.com', 'johnpassword')
-        Publicacion.objects.create(autor = autor, titulo = 'Titulo publicacion',
+        Publicacion.objects.create(autor = autor, titulo = 'Titulo publicacionn',
                                    texto = 'Texto de prueba de la publicación')
         pass
 
